@@ -1,10 +1,8 @@
 // required mongos
 const mongoose = require("mongoose");
 // connect to db
-const url =
-  "mongodb+srv://sabakur12360:iQyFyn80ItyUFj37@cluster0.mpmvw.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
-const connectDB = async () => {
+const connectDB = async (url) => {
   try {
     const con = await mongoose.connect(url, {
       useNewUrlParser: true,
